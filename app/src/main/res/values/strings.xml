@@ -1,0 +1,5 @@
+<resources>
+<string name="app_name">Thu Trần Công Nợ OCR Fix</string>
+<string name="accessibility_service_label">Thu Trần đọc KiotViet</string>
+<string name="accessibility_service_description">Đọc tab Công nợ KiotViet và tạo tin nhắn.</string>
+</resources>

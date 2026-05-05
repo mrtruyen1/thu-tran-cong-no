@@ -1,0 +1,28 @@
+plugins { id 'com.android.application'; id 'org.jetbrains.kotlin.android' }
+
+android {
+    namespace 'com.thutran.congno'
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.thutran.congno.ocrfinal"
+        minSdk 26
+        targetSdk 35
+        versionCode 50
+        versionName "50.0-release-latest-apk"
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    kotlinOptions { jvmTarget = "1.8" }
+
+    buildTypes {
+        release {
+            // Dùng debug signing để APK release cài được trực tiếp trên điện thoại khi build bằng GitHub Actions.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.mlkit:text-recognition:16.0.1'
+}
